@@ -2,7 +2,7 @@ import streamlit as st
 from google import genai
 
 try:
-    client = genai.Client(api_key=st.secrets["AIzaSyBhwR6bbd5t4neTkSVB3i3DHqYFyA_Zy-w"])
+    client = genai.Client(api_key=st.secrets["GEMINI_API_KEY"])
     st.write("Gemini API client configured.")
 
     prompt = "Benefits of API key management?"
