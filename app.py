@@ -1,3 +1,4 @@
+import streamlit as st
 from google import genai
 
 client = genai.Client(api_key="AIzaSyBhwR6bbd5t4neTkSVB3i3DHqYFyA_Zy-w")
