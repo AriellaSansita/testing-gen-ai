@@ -5,7 +5,7 @@ while True:
    user_input = input("You: ")
    if user_input.lower() == "exit":
        print("Bot: Goodbye!")
-    break
+   break
 
 try:
     client = genai.Client(api_key=st.secrets["GEMINI_API_KEY"])
