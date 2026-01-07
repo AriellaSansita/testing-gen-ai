@@ -1,6 +1,24 @@
 import streamlit as st
 from google import genai
 
+st.title("Gemini Chat")
+
+client = genai.Client(api_key=st.secrets["GEMINI_API_KEY"])
+
+user_input = st.text_input("You:")
+
+if user_input:
+    response = client.models.generate_content(
+        model="gemini-2.5-flash",
+        contents=user_input
+    )
+    st.write("Bot:", response.text)
+
+
+"""
+import streamlit as st
+from google import genai
+
 while True:
    user_input = input("You: ")
    if user_input.lower() == "exit":
@@ -21,3 +39,4 @@ try:
 
 except Exception as e:
     st.error(f"Error: {e}. Check your 'GEMINI_API_KEY' in secrets.")
+"""
